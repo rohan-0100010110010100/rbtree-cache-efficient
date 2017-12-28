@@ -56,9 +56,6 @@ private:
  void right_rotate(Node* n);
 };
 
-
-
-
 template <class T>
 void Redblack<T>::printTree(Node* n){
 
@@ -66,9 +63,7 @@ if( n != nil ){
 std::cout << n->val <<'\t'<< n->col<<'\t'<< n->parent->val<<'\n';
 if(n->nl!=nil)
 printTree( n->nl );
-
-
-
+  
 if(n->nr!=nil)
 printTree( n->nr );
 }
@@ -133,11 +128,6 @@ void Redblack<T>::remove(T key){
     else
     w= w->nl;
   }
-
-
-
-
-
 }
 
 template <class T>
