@@ -7,8 +7,12 @@
 
 ## Build
 
-g++ testprogram.cpp -ljemalloc
+$ g++ testprogram.cpp -ljemalloc -o test
 
+## Run the outputfile
+
+ $ LD_PRELOAD=`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision` ./test
+ 
 ```
 THE MIT LICENSE
 
