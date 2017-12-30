@@ -2,7 +2,7 @@
 
 ## Requirements
 * Minimal gcc 4.8
-* [jemalloc - A memory allocator made by facebook][https://github.com/jemalloc/jemalloc]
+* [jemalloc - A memory allocator made by facebook](https://github.com/jemalloc/jemalloc)
 * Linux 64 bit
 
 ## Build
