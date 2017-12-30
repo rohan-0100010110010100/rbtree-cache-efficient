@@ -32,7 +32,7 @@ SOFTWARE.
 
  $ g++ testprogram.cpp -ljemalloc -o test
  
- ### Note : Don't statically link the "malloc" or "free" while using gccc compiler, jemalloc will fail to execute.
+ #### Note : Don't statically link the "malloc" or "free" while using gccc compiler, jemalloc will fail to execute.
  
 
 ## Executing the application
