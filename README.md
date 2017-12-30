@@ -1,18 +1,4 @@
 # rbtree-cache-efficient
-
-## Requirements
-* Minimal gcc 4.8
-* [jemalloc - A memory allocator made by facebook](https://github.com/jemalloc/jemalloc)
-* Linux 64 bit
-
-## Build
-
-$ g++ testprogram.cpp -ljemalloc -o test
-
-## Executing the application
-
- $ LD_PRELOAD=`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision` ./test
- 
 ```
 THE MIT LICENSE
 
@@ -37,3 +23,20 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ```
+## Requirements
+* Minimal gcc 4.8
+* [jemalloc - A memory allocator made by facebook](https://github.com/jemalloc/jemalloc)
+* Linux 64 bit
+
+## Build
+
+ $ g++ testprogram.cpp -ljemalloc -o test
+ 
+ ### Note : Don't statically link the "malloc" or "free" while using gccc compiler, jemalloc will fail to execute.
+ 
+
+## Executing the application
+
+ $ LD_PRELOAD=`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision` ./test
+
+
