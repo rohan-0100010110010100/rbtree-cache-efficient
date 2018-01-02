@@ -6,7 +6,6 @@ Hint : Use your Brains
 
 
 #include <iostream>
-#include <stdlib.h>
 #include <assert.h>
 #include <jemalloc/jemalloc.h>
 
