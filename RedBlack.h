@@ -39,10 +39,9 @@ public:
   }
   ~Redblack(){
     //Memory free
-   // Node* n=base;
+        
+    DeleteTree(base);
     
-    free(base);
-    free(nil);
   }
   void insert(T key);
   void remove(T key);
@@ -53,6 +52,7 @@ public:
 private:
  void left_rotate(Node* n);
  void right_rotate(Node* n);
+ void DeleteTree(Node*& n)
 };
 
 template <class T>
@@ -67,6 +67,16 @@ if(n->nr!=nil)
 printTree( n->nr );
 }
 
+}
+
+template <class T>
+void Redblack<T>::DeleteTree(Node*& n)
+{
+    if (!n) return;
+    DeleteTree(n->nl);
+    DeleteTree(n->nr);
+    free(n);
+    n=0;
 }
 
 template <class T>
